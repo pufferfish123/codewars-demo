@@ -5,5 +5,6 @@
 array is non-empty. is integers, positive, negative, no floats. */
 
 function grow(x){
+   return x.reduce((acc, a) => acc * a, 1)
 
 }
