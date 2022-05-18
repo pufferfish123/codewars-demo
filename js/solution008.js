@@ -1,10 +1,23 @@
-/* Given a non-empty array of integers, return the result of multiplying the values together in order. Example:
+/* Task:
+Given a list of integers, determine whether the sum of its elements is odd or even.
 
-[1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
+Give your answer as a string matching "odd" or "even".
 
-array is non-empty. is integers, positive, negative, no floats. */
+If the input array is empty consider it as: [0] (array with a zero).
 
-function grow(x){
-   return x.reduce((acc, a) => acc * a, 1)
+Examples:
+Input: [0]
+Output: "even"
 
+Input: [0, 1, 4]
+Output: "odd"
+
+Input: [0, -1, -5]
+Output: "even" */
+
+function oddOrEven(array) {
+   let reducedArray = array.reduce((acc, a) => acc + a, 0)
+   if (reducedArray % 2 === 0){
+      return "even"
+   } else return "odd"
 }
