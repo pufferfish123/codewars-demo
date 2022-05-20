@@ -10,3 +10,7 @@ per gallon. There are 2 gallons left. Considering these factors,
 The input values are always positive. */
 
 
+const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+    let distanceAvailable = mpg * fuelLeft
+    return distanceAvailable < distanceToPump ? false : true 
+  };
