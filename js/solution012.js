@@ -1,22 +1,25 @@
-/* Your task is to create a function that does four basic mathematical operations.
+/* Consider an array/list of sheep where some sheep may be missing from their place. We need a function that counts the number of sheep present in the array (true means present).
 
-The function should take three arguments - operation(string/char), value1(number), value2(number).
-The function should return result of numbers after applying the chosen operation.
+For example,
 
-Examples(Operator, value1, value2) --> output
-('+', 4, 7) --> 11
-('-', 15, 18) --> -3
-('*', 5, 5) --> 25
-('/', 49, 7) --> 7 */
+[true,  true,  true,  false,
+  true,  true,  true,  true ,
+  true,  false, true,  false,
+  true,  false, false, true ,
+  true,  true,  true,  true ,
+  false, false, true,  true]
+The correct answer would be 17.
 
-function basicOp(operation, value1, value2){
-  if (operation === '+') {
-    return value1 + value2
-} else if (operation === '-') {
-    return value1 - value2
-} else if (operation === '*') {
-    return value1 * value2
-} else if(operation === '/') {
-    return value1 / value2  
-}
+Hint: Don't forget to check for bad values like null/undefined
+
+ */
+
+function countSheeps(arrayOfSheep) {
+    let sheepCount = 0
+   for (i = 0; i < arrayOfSheep.length; i++){
+      if (arrayOfSheep[i] === true){
+          sheepCount++
+      }
+  }
+  return sheepCount
 }
