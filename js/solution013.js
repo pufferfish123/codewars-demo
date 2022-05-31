@@ -17,3 +17,14 @@ A word (string) of length 0 < str < 1000 (In javascript you may get slightly mor
 
 The middle character(s) of the word represented as a string. */
 
+
+function getMiddle(s){
+    let size = s.length
+    if (size % 2 == 0){
+      return `${s[(size/2)-1]}${s[size/2]}`
+    } else {
+      return s[(size - 1) / 2]
+    }
+  }
+  
+  getMiddle("testing")
