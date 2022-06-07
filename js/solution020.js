@@ -8,16 +8,13 @@ Examples (Input --> Output)
 "a234"   -->  false */
 
 
-function validatePIN (pin){
-  for (i = 0; i <= pin.length; i++){
-    if (typeof pin[i] !== "number"){
-      return false
-    }
-  };
-  if (pin.length === 4 || pin.length === 6){
-      return true
-  };
-  return false
+function validatePIN (pin) {
+  //we measure the pin string
+  if( pin.length !== 4 && pin.length !== 6){
+      return false}
+  //we loop to check its only numbers
+  for (let i in pin)
+      if (pin[i] > '9' || pin[i] < '0'){
+          return false;}
+  return true;
 }
-
-let pinArr = Number(pin.split())
